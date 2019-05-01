@@ -9,13 +9,4 @@ RUN curl -fsSL -o /tmp/apache-maven.tar.gz ${MAVEN_BASE_URL}/apache-maven-${MAVE
 && rm -f /tmp/apache-maven.tar.gz \
 && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
-
-#RUN apt update \
-#&& apt -y install maven \
-#&& mvn -version \
-#&& apt -y install default-jdk \
-#&& java -version
-
 CMD ["mvn"]
-
-WORKDIR /usr/src/mavenproject
